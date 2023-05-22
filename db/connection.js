@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
   
   // password: '',
   // database: 'employees'
-  host: DB_LOCALHOST,
+  host: DB_LOCALHOST,mysql, 
   
   user: DB_ROOT,
   

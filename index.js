@@ -8,34 +8,14 @@ inquirer.prompt(
             type: "list",
             message: "What do you want to do?",   
             name: "result",       
-            choices: ["Add Department", "Add Role", "Add Employee", "Add Manager"]
+            choices: ["Add Department", "Add Role", "Add Employee", ]
         }
     ]
 )
-.then(function(x) {
-    if (x.result === "Add Department") {
-        return myDepartment();
-    } else if (x.result === "Add Role") {
-        return myRole()
-    }
-    else {
-        console.log("WRONG ENTRY");
-    }
-})
 
-inquirer.prompt(
-  [
-      {
-          type: "list",
-          message: "What do you want to do?",   
-          name: "result",       
-          choices: ["Add Department", "Add Role", "Add Employee", "Add Manager"]
-      }
-  ]
-)
 .then(function(x) {
   if (x.result === "Add Department") {
-      return myDepartment();
+      return myDepartment(); 
   } else if (x.result === "Add Role") {
       return myRole()
   }
@@ -43,6 +23,35 @@ inquirer.prompt(
       console.log("WRONG ENTRY");
   }
 })
+
+function myDepartment() {
+inquirer.prompt([{
+            message: "What is the name",   
+            name: "name",       
+            type: "input"
+}]).then(response => console.log(response))
+}
+
+then(function(x) {
+  if (x.result === "Add Role") {
+      return myDepartment(); 
+  } else if (x.result === "Add Role") {
+      return myRole()
+  }
+  else {
+      console.log("WRONG ENTRY");
+  }
+})
+
+function myDepartment() {
+inquirer.prompt([{
+            message: "What is the name",   
+            name: "name",       
+            type: "input"
+}]).then(response => console.log(response))
+}
+
+
 
 
 // switch (key) {
@@ -60,7 +69,7 @@ function Department() {
             type: "input",
             message: "Name of Department?",
             name: "Department"
-          },
+          }
     ])
     .then(function(result) {
         db.promise().query("SELECT * FROM Departments")
@@ -110,5 +119,5 @@ function Department() {
 //       );
 //   }
   
-  init();
+  //init();
 
