@@ -30,9 +30,8 @@ inquirer.prompt([{
             name: "name",       
             type: "input"
 }]).then(response => console.log(response))
-}
 
-then(function(x) {
+.then(function(x) {
   if (x.result === "Add Role") {
       return myDepartment(); 
   } else if (x.result === "Add Role") {
@@ -42,6 +41,9 @@ then(function(x) {
       console.log("WRONG ENTRY");
   }
 })
+}
+
+
 
 function myDepartment() {
 inquirer.prompt([{
@@ -54,14 +56,7 @@ inquirer.prompt([{
 
 
 
-// switch (key) {
-//     case value:
-        
-//         break;
 
-//     default:
-//         break;
-// }
 
 function Department() {
     inquirer.prompt([

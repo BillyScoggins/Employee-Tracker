@@ -1,18 +1,19 @@
 const mysql = require('mysql2');
 require('dotenv').config()
 const connection = mysql.createConnection({
-  // host: 'localhost',
+   host: '127.0.0.1',
   
-  // user: 'root',
+   user: 'root',
   
-  // password: '',
-  // database: 'employees'
-  host: DB_LOCALHOST,mysql, 
+   password: '',
+   database: 'employee_db'
+
+  // host: DB_LOCALHOST,mysql, 
   
-  user: DB_ROOT,
+  // user: DB_ROOT,
   
-  password: DB_PASSWORD,
-  database: DB_DATABASE
+  // password: DB_PASSWORD,
+  // database: DB_DATABASE
 });
 connection.connect(function (err) {
   if (err) throw err;
