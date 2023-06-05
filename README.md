@@ -10,4 +10,5 @@ This application helps the user to solve the problem of employee organization, p
 Working on this application has taught me about SQL and the role of using the backline to create user friendly applications for the user.
 
 
-
+#video wlak-through
+https://drive.google.com/file/d/1U0Y5xb1jX_r1sspF16NW5MyB3qzIvEN6/view
